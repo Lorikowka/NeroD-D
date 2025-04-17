@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../style/main.css" /><meta charset="UTF-8"><title>Вводный урок</title>
+<script>
+function completeLesson() {
+  fetch('/save_progress?lesson=0')
+    .then(() => {
+      window.location.href = '/app/test_0.html';
+    });
+}
+</script></head>
+<body>
+  <h1>Вводный урок: Промпт инжиниринг</h1>
+  <p class="big-text">Что такое промпт инжиниринг? Промпт инжиниринг - это разработка запросов (или «промптов»), которые управляют поведением генеративных моделей искусственного интеллекта (ИИ). </p>
+  <button onclick="completeLesson()">Далее...</button>
+</body></html>

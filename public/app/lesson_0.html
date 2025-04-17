@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../style/main.css" /><meta charset="UTF-8"><title>Вводный урок</title>
+
+<script>
+function completeLesson() {
+  fetch('/save_progress?lesson=0')
+    .then(() => {
+      window.location.href = '/app/lesson_0.1.html';
+    });
+}
+function stopLesson(){
+  fetch('/save_progress?lesson=0')
+    .then(() => {
+      window.location.href = '/index.html';
+    });
+}
+</script></head>
+<body>
+  <h1>Вводный урок: Промпт инжиниринг</h1>
+  <p class="big-text">Что такое промпт инжиниринг? Промпт инжиниринг - это разработка запросов (или «промптов»), которые управляют поведением генеративных моделей искусственного интеллекта (ИИ). </p>
+  <p class="big-text">Промпт — это текстовый запрос, который вы отправляете ИИ, чтобы получить нужный результат. От качества и структуры промпта зависит то, насколько точный и полезный ответ даст модель.</p>
+  <p class="big-text">Принципы хорошего промпта: <br>Чёткая формулировка — избегай двусмысленности. <br>Контекст — давай ИИ достаточно информации. <br>Роль — можешь указать, кем должен быть ИИ (пример: «Ты — эксперт по маркетингу»). <br>Формат ответа — укажи, как именно ты хочешь получить результат (список, таблица, код и т.д.).</p>
+  <button onclick="completeLesson()">Далее</button>
+  <button onclick="stopLesson()">Вернуться на главную</button>
+</body></html>
