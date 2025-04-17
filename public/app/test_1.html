@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Тест 1</title>
-<style>
-  body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #fff; }
-</style></head>
+<html><head><meta charset="UTF-8"><link rel="stylesheet" href="../style/main.css" /><title>Тест 1</title> <link rel="stylesheet" href="../style/main.css" />
+</head>
 <body>
   <h1>Тест 1</h1>
-  <p>Тестовая часть по уроку. Ответь на вопросы.</p>
+  <div class="quiz">
+    <h3>Вопрос 1:</h3>
+    <p>Что нужно для хорошего текстового промпта?</p>
+    <div class="answers" id="q1">
+      <button onclick="checkAnswer('q1', 'wrong')">а) Указать стиль</button>
+      <button onclick="checkAnswer('q1', 'wrong')">б) Определить аудиторию</button>
+      <button onclick="checkAnswer('q1', 'wrong')">в) Задать формат</button>
+      <button onclick="checkAnswer('q1', 'correct')">г) Всё выше</button>
+    </div>
+  
+    <h3>Вопрос 2:</h3>
+    <p>Как точнее попросить объяснение для ребёнка?</p>
+    <div class="answers" id="q2">
+      <button onclick="checkAnswer('q2', 'wrong')">а) Объясни тему</button>
+      <button onclick="checkAnswer('q2', 'correct')">
+        б) Объясни, как работает интернет, для ребёнка 10 лет, простыми словами
+      </button>
+      <button onclick="checkAnswer('q2', 'wrong')">в) Интернет — что это?</button>
+      <button onclick="checkAnswer('q2', 'wrong')">г) Сделай смешно</button>
+    </div>
+  </div>
+  <script>
+    function checkAnswer(questionId, result) {
+      const buttons = document.querySelectorAll(`#${questionId} button`);
+      buttons.forEach(btn => btn.disabled = true);
+  
+      const correctButton = Array.from(buttons).find(btn =>
+        btn.getAttribute('onclick')?.includes("'correct'")
+      );
+      correctButton.classList.add('correct');
+  
+      if (result === 'wrong') {
+        event.target.classList.add('wrong');
+      }
+    }
+  </script>
+  
 </body></html>
