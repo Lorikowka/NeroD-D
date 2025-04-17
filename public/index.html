@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Промпт-Тренер</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fff;
+      color: #0B1D40;
+    }
+    .card {
+      background: #cad3e0;
+      padding: 16px;
+      border-radius: 16px;
+      margin-bottom: 12px;
+    }
+    button {
+      background: #1E5CFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+  </style>
+  <script>
+    function goToLesson(lesson) {
+      window.location.href = '/app/lesson_' + lesson + '.html';
+    }
+  </script>
+</head>
+<body>
+  <h1>Промпт-Тренер</h1>
+  <div class="card"><h2>Урок 1: Текст</h2><button onclick="goToLesson(1)">Перейти</button></div>
+  <div class="card"><h2>Урок 2: Видео</h2><button onclick="goToLesson(2)">Перейти</button></div>
+  <div class="card"><h2>Урок 3: Аудио</h2><button onclick="goToLesson(3)">Перейти</button></div>
+  <div class="card"><h2>Урок 4: Изображение</h2><button onclick="goToLesson(4)">Перейти</button></div>
+</body>
+</html>
