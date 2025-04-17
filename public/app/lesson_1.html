@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Урок 1</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #fff; }
+  button { background: #1E5CFF; color: white; border: none; padding: 10px 20px; border-radius: 12px; cursor: pointer; margin-top: 12px; }
+</style>
+<script>
+function completeLesson() {
+  fetch('/save_progress?lesson=1')
+    .then(() => {
+      window.location.href = '/app/test_1.html';
+    });
+}
+</script></head>
+<body>
+  <h1>Урок 1: Текст</h1>
+  <p>Теоретическая часть по теме: Текст. Здесь даётся базовая информация и примеры.</p>
+  <button onclick="completeLesson()">Перейти к тесту</button>
+</body></html>
