@@ -1,0 +1,27 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #d5e1eb;
+    color: #081631;
+}
+.card {
+  background: #cad3e0;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+button {
+  background: #1E5CFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.big-text { font-size: 19px; }
+
+
