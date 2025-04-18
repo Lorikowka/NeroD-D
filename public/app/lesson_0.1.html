@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html><head><link rel="stylesheet" href="../style/main.css" /><meta charset="UTF-8"><title>Вводный урок</title>
 <script>
-function completeLesson() {
-  fetch('/save_progress?lesson=0')
-    .then(() => {
-      window.location.href = '/app/test_0.html';
-    });
-}
+
+
 function stopLesson(){
   fetch('/save_progress?lesson=0')
     .then(() => {
@@ -27,6 +23,6 @@ function stopLesson(){
     <p>
       Неполным, <br>Не в том стиле, <br>Не в нужном формате.</p></p> 
   </div>
-  <button onclick="completeLesson()">Далее...</button>
+<!--<button onclick="completeLesson()">Далее...</button>-->  
   <button onclick="stopLesson()">Вернуться на главную</button>
 </body></html>
