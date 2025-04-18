@@ -2,12 +2,7 @@
 <html><head><link rel="stylesheet" href="../style/main.css" /><meta charset="UTF-8"><title>Урок 2</title>
 
 <script>
-function completeLesson() {
-  fetch('/save_progress?lesson=2')
-    .then(() => {
-      window.location.href = '/app/test_2.html';
-    });
-}
+
 function stopLesson(){
   fetch('/save_progress?lesson=0')
     .then(() => {
@@ -64,6 +59,6 @@ function stopLesson(){
   
   
   
-      <button onclick="completeLesson()">Перейти к тесту</button>
-  <button onclick="stopLesson()">Стоп</button>
+      <!--<button onclick="completeLesson()">Перейти к тесту</button>-->
+  <button onclick="stopLesson()">Вернуться на главуню</button>
 </body></html>
