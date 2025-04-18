@@ -2,12 +2,7 @@
 <html><head><link rel="stylesheet" href="../style/main.css" /><meta charset="UTF-8"><title>Урок 1</title>
 
 <script>
-function completeLesson() {
-  fetch('/save_progress?lesson=1')
-    .then(() => {
-      window.location.href = '/app/test_1.html';
-    });
-}
+
 function stopLesson(){
   fetch('/save_progress?lesson=0')
     .then(() => {
@@ -35,6 +30,15 @@ function stopLesson(){
     <br>
     <tt>Объясни, как играть в D&D.</tt><br>
     <br><b>Лучше:</b><br><tt>Объясни, как начать играть в D&D, по шагам:<br>Расскажи, что такое D&D и какие роли бывают у игроков<br>Объясни, как создаётся персонаж и что означают характеристики<br>Опиши, как проходят сессии и кто такой мастер игры<br>Приведи пример короткой сцены, где персонаж сражается с гоблином</tt></div></p>
-    <button onclick="completeLesson()">Перейти к тесту</button>
+  <p><b>Встраивай примеры (Few-shot prompting)</b> <br>
+    Покажи, как ты хочешь, чтобы ИИ писал — прямо внутри промпта.
+    
+    <br><b>Пример:</b>
+    <div class="card"><tt>
+    Вот пример структуры поста: <br>— Заголовок
+    <br>— 3 коротких абзаца
+    <br>— Призыв к действию
+    <br>Теперь напиши пост на тему: "Как прокачать навыки публичных выступлений"</tt></div></p>
+  <!--<button onclick="completeLesson()">Перейти к тесту</button>-->
   <button onclick="stopLesson()">Вернуться на главную</button>
 </body></html>
