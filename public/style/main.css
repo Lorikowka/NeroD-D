@@ -3,9 +3,11 @@ body {
   font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 20px;
-    background: #d5e1eb;
-    color: #081631;
-    font-size: 19px; 
+    background-image: url("../background.png");
+    background-size: cover;
+    color: rgb(2, 11, 30);
+    font-size: 19px;
+    
 }
 .card {
   background: #cad3e0;
